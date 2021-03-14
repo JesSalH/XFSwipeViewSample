@@ -4,39 +4,83 @@
              x:Class="XFSwipeViewSample.MainPage">
 
     <StackLayout>
+        
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="SwipeView Sample" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
+        
         <SwipeView>
+            
+            <!--swipe left-->
             <SwipeView.LeftItems>
+                
                 <SwipeItems>
                     <SwipeItem Text="Tada" BackgroundColor="Red" Invoked="SwipeItem_Invoked" />
                     <SwipeItem Text="Sub" BackgroundColor="Yellow" Invoked="SwipeItem_Invoked" />
                 </SwipeItems>
+                
             </SwipeView.LeftItems>
+            
+            
+            
             <SwipeView.RightItems>
+                
+                <!--swipe right-->
                 <SwipeItems>
+                    
                     <SwipeItem Text="Now" BackgroundColor="Blue" Invoked="SwipeItem_Invoked" />
                     <SwipeItem Text="Please" BackgroundColor="Green" Invoked="SwipeItem_Invoked" />
+                    
                 </SwipeItems>
+                
             </SwipeView.RightItems>
-            <Label BackgroundColor="White" Text="Swipe me!" FontSize="Title" Padding="30,10,30,10"/>
+
+            <StackLayout>
+                <Label BackgroundColor="White" Text="Swipe me left or right" FontSize="Title" Padding="30,10,30,10"/>
+            </StackLayout>
+
+
         </SwipeView>
+        
+        
+        
+        
 
         <CollectionView ItemsSource="{Binding MyItems}">
+            
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+                    
                     <SwipeView>
+
+
+                        <!--swipe left-->
+                        <SwipeView.LeftItems>
+
+                            <SwipeItems>
+                                <SwipeItem Text="Tada" BackgroundColor="Red" Invoked="SwipeItem_Invoked" />
+                                <SwipeItem Text="Sub" BackgroundColor="Yellow" Invoked="SwipeItem_Invoked" />
+                            </SwipeItems>   
+
+                        </SwipeView.LeftItems>
+
+
                         <SwipeView.RightItems>
+                            
                             <SwipeItems>
                                 <SwipeItem Text="Now" BackgroundColor="Blue" Invoked="SwipeItem_Invoked" />
                                 <SwipeItem Text="Please" BackgroundColor="Green" Invoked="SwipeItem_Invoked" />
                             </SwipeItems>
+                            
                         </SwipeView.RightItems>
+                        
                         <StackLayout>
                             <Label BackgroundColor="White" Text="{Binding .}" FontSize="Title" Padding="30,10,30,10"/>
                         </StackLayout>
+                        
+                        
                     </SwipeView>
+                    
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

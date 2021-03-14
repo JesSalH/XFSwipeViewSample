@@ -14,7 +14,8 @@ namespace XFSwipeViewSample
         {
             "Hi there",
             "Please subscribe",
-            "to my channel"
+            "to my channel",
+            "Another line here"
         };
 
         public MainPage()
